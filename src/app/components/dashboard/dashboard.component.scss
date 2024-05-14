@@ -1,0 +1,13 @@
+.button-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  height: 70px;
+  .p-button{
+    background-color: rgba(114, 114, 121, 0.4);
+    border-color: transparent;
+    color: #727279;
+    box-shadow: none;
+    min-width: 120px;
+  }
+}
+

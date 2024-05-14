@@ -10,6 +10,7 @@ import {Product} from "../../share/models/product";
 export class DashboardComponent {
   @ViewChild('dv') dataView: DataView | undefined;
   product!: Product[];
+  filteredProducts: any[] = [];
   constructor(private productService: ProductService) {}
   ngOnInit() {
     this.productService.getJsonData().subscribe(data => {
@@ -17,6 +18,13 @@ export class DashboardComponent {
       console.log(data)
     });
   }
+  //get資料
+  loadInitialProductList() {
+    this.productService.getJsonData().subscribe(data => {
+      this.product = data;
+    });
+  }
+  //依照name搜尋
   applyGlobalFilter(event: any) {
     const keyword = event.target.value.toLowerCase();
     if (keyword === '') {
@@ -27,9 +35,13 @@ export class DashboardComponent {
       );
     }
   }
-  loadInitialProductList() {
+	//依照category分類
+  filterProducts(category: string) {
     this.productService.getJsonData().subscribe(data => {
       this.product = data;
+      this.filteredProducts = this.product.filter(product => product.category === category);
+      this.product = this.filteredProducts;
+      console.log(this.filteredProducts)
     });
   }
 }
