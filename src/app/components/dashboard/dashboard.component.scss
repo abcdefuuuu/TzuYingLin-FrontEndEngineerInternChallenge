@@ -10,4 +10,26 @@
     min-width: 120px;
   }
 }
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #f8f9fa;
+  text-align: center;
+  .p-button{
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
 
+.p-button-text {
+  color: #747480;
+  border: none;
+  margin: 0 10px;
+}
+
+.selected {
+  color: #7f73e8;
+}

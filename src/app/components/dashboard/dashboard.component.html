@@ -57,3 +57,33 @@
     </ng-template>
   </p-dataView>
 </div>
+<footer class="footer">
+  <div class="grid justify-center-center">
+    <div class="flex col-12">
+      <div class="col-3">
+        <button pButton type="button" class="p-button-text" [ngClass]="{'selected': selectedButton === 'home'}" (click)="selectButton('home')">
+          <i class="pi pi-home" *ngIf="selectedButton !== 'home'"></i>
+          <span *ngIf="selectedButton === 'home'">Home</span>
+        </button>
+      </div>
+      <div class="col-3">
+        <button pButton type="button" class="p-button-text" [ngClass]="{'selected': selectedButton === 'favorites'}" (click)="selectButton('favorites')">
+          <i class="pi pi-heart" *ngIf="selectedButton !== 'favorites'"></i>
+          <span *ngIf="selectedButton === 'favorites'">Favorites</span>
+        </button>
+      </div>
+      <div class="col-3">
+        <button pButton type="button" class="p-button-text" [ngClass]="{'selected': selectedButton === 'cart'}" (click)="selectButton('cart')">
+          <i class="pi pi-shopping-bag" *ngIf="selectedButton !== 'cart'"></i>
+          <span *ngIf="selectedButton === 'cart'">Cart</span>
+        </button>
+      </div>
+      <div class="col-3">
+        <button pButton type="button" class="p-button-text" [ngClass]="{'selected': selectedButton === 'wallet'}" (click)="selectButton('wallet')">
+          <i class="pi pi-wallet" *ngIf="selectedButton !== 'wallet'"></i>
+          <span *ngIf="selectedButton === 'wallet'">Wallet</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>

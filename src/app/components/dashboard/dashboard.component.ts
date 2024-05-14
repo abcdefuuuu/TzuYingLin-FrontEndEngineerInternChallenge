@@ -44,4 +44,10 @@ export class DashboardComponent {
       console.log(this.filteredProducts)
     });
   }
+
+  //footer button
+  selectedButton!: string;
+  selectButton(button: string): void {
+    this.selectedButton = button;
+  }
 }
