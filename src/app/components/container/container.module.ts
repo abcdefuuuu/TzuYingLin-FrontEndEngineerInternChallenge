@@ -7,6 +7,8 @@ import { ContainerRoutingModule } from './container-routing.module';
 import {DashboardComponent} from "../dashboard/dashboard.component";
 import {SidebarComponent} from "../sidebar/sidebar.component";
 import {DataViewModule} from "primeng/dataview";
+import {IconFieldModule} from "primeng/iconfield";
+import {InputIconModule} from "primeng/inputicon";
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import {DataViewModule} from "primeng/dataview";
     FormsModule,
     ReactiveFormsModule,
     DataViewModule,
+    IconFieldModule,
+    InputIconModule,
   ]
 })
 export class ContainerModule { }

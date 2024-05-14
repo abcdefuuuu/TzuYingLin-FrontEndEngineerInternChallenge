@@ -1,4 +1,15 @@
-
+<div class="col-12">
+  <div class="flex flex-column col-12 text-left">
+    <label class="text-3xl font-bold">Hello</label>
+    <small class="text-400">Welcome to zaza.</small>
+  </div>
+</div>
+<!--<div class="col-12">-->
+<!--<p-iconField iconPosition="left">-->
+<!--  <p-inputIcon styleClass="pi pi-search" />-->
+<!--  <input type="text" pInputText placeholder="Search" />-->
+<!--</p-iconField>-->
+<!--</div>-->
 <p-dataView #dv [value]="product" layout="grid">
   <ng-template let-product pTemplate="grid">
     <div class="grid grid-nogutter">
@@ -8,7 +19,7 @@
             <div class="relative mx-auto">
               <img class="border-round w-full"
                    [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image"
-                   [alt]="product.name" style="max-width: 300px;"/>
+                   [alt]="product.name" style="max-width: 200px;"/>
             </div>
           </div>
           <div class="pt-4">
