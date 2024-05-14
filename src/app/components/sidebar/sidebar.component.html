@@ -1,0 +1,88 @@
+<div class="card flex justify-content-start">
+  <p-sidebar #sidebarRef [(visible)]="sidebarVisible">
+    <ng-template pTemplate="headless">
+      <div class="flex flex-column h-full">
+        <div class="flex align-items-center pt-5 pl-4">
+          <p-button type="button" (click)="closeCallback($event)" icon="pi pi-times" rounded="true"
+                    outlined="true" styleClass="h-2rem w-2rem"></p-button>
+        </div>
+        <div class="overflow-y-auto">
+          <ul class="list-none p-3 m-0">
+            <li>
+              <ul class="list-none p-0 m-0 overflow-hidden">
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle"/>
+                    <span class="font-bold ml-2">Amy Elsner</span>
+                  </a>
+                </li>
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <i class="pi pi-sun mr-2"></i>
+                    <span class="font-medium">Dark Mode</span>
+                    <div class="pl-6">
+                      <p-inputSwitch [(ngModel)]="checked" />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <i class="pi pi-exclamation-circle mr-2"></i>
+                    <span class="font-medium">Account Information</span>
+                  </a>
+                </li>
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <i class="pi pi-lock mr-2"></i>
+                    <span class="font-medium">Password</span>
+                  </a>
+                </li>
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <i class="pi pi-shopping-bag mr-2"></i>
+                    <span class="font-medium">Order</span>
+                  </a>
+                </li>
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <i class="pi pi-wallet mr-2"></i>
+                    <span class="font-medium">My Cards</span>
+                  </a>
+                </li>
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <i class="pi pi-heart mr-2"></i>
+                    <span class="font-medium">Wishist</span>
+                  </a>
+                </li>
+                <li>
+                  <a pRipple
+                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <i class="pi pi-cog mr-2"></i>
+                    <span class="font-medium">Settings</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <a pRipple class="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+            <i class="pi pi-sign-out mr-2"></i>
+            <span class="font-medium text-red-500" (click)="logout()">Logout</span>
+          </a>
+        </div>
+      </div>
+    </ng-template>
+  </p-sidebar>
+  <div class="flex align-items-center pt-5 pl-4">
+    <p-button icon="pi pi-bars" [rounded]="true" severity="secondary" (click)="sidebarVisible = true"/>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="col">
+  <div class="flex flex-column col-12 text-center">
+    <label class="text-3xl font-bold">Sign Up</label>
+  </div>
+  <div class="flex flex-column col-12 text-left mt-4">
+  </div>
+  <form [formGroup]="sign_form" >
+    <div class="flex flex-column col-12 text-left mt-8">
+      <label>Username</label>
+      <input class="mt-3" pInputText type="text" formControlName="user_name"
+             [ngClass]="{'ng-dirty': sign_form.controls['user_name'].invalid && sign_form.controls['user_name'].touched}"/>
+      <div *ngIf="sign_form.get('user_name')?.invalid && sign_form.get('user_name')?.touched" class="text-red-600 mt-1">Username is required</div>
+    </div>
+    <div class="flex flex-column col-12 text-left">
+      <label>Password</label>
+      <input class="mt-3" pInputText type="text" formControlName="password"
+             [ngClass]="{'ng-dirty': sign_form.controls['password'].invalid && sign_form.controls['password'].touched}"/>
+      <div *ngIf="sign_form.get('password')?.invalid && sign_form.get('password')?.touched" class="text-red-600 mt-1">password is required</div>
+    </div>
+    <div class="flex flex-column col-12 text-left">
+      <label>Email Address</label>
+      <input class="mt-3" pInputText type="email" formControlName="email"
+             [ngClass]="{'ng-dirty': sign_form.controls['email'].invalid && sign_form.controls['email'].touched}"/>
+      <div *ngIf="sign_form.get('email')?.invalid && sign_form.get('email')?.touched" class="text-red-600 mt-1">email is required & email invaild</div>
+    </div>
+    <div class="flex justify-content-between col-12 mb-5">
+      <div class="flex align-items-center justify-content-center">Remember me</div>
+      <div class="flex align-items-center justify-content-center"><p-inputSwitch formControlName="checked" /></div>
+    </div>
+
+    <div class="footer">
+      <button pButton type="button" label="Sign Up" class="border-transparent" (click)="sign()"></button>
+    </div>
+  </form>
+</div>
+
